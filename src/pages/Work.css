@@ -1,0 +1,274 @@
+/* Work Page Styles */
+
+.work-hero {
+    padding-top: var(--space-4xl);
+    text-align: center;
+}
+
+.work-label {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--color-gold);
+    margin-bottom: var(--space-lg);
+}
+
+.work-title {
+    font-size: var(--text-5xl);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* Filter Section */
+.work-filter {
+    padding: var(--space-xl) 0;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gray-muted);
+    background: transparent;
+    border: 1px solid var(--color-gray);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.filter-btn:hover {
+    color: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+.filter-btn.active {
+    color: var(--color-black);
+    background: var(--color-gold-gradient);
+    border-color: transparent;
+}
+
+/* Poster Grid */
+.work-gallery {
+    background: var(--color-black-soft);
+    padding-bottom: var(--space-4xl);
+}
+
+.poster-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+}
+
+/* Movie Poster Card */
+.poster-card {
+    position: relative;
+    cursor: pointer;
+    transition: transform var(--transition-base), z-index 0s;
+}
+
+.poster-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.poster-image {
+    position: relative;
+    aspect-ratio: 2/3;
+    background: var(--color-gray-dark);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.poster-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.poster-card:hover .poster-image img {
+    transform: scale(1.1);
+}
+
+.poster-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    color: var(--color-gray-muted);
+    background: linear-gradient(180deg, var(--color-gray-dark) 0%, var(--color-gray) 100%);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.poster-placeholder svg {
+    width: 48px;
+    height: 48px;
+    opacity: 0.5;
+}
+
+.poster-placeholder span {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+/* Spotlight Effect on Hover */
+.poster-spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center,
+            rgba(255, 215, 0, 0.15) 0%,
+            rgba(255, 215, 0, 0.05) 30%,
+            transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    pointer-events: none;
+}
+
+.poster-card:hover .poster-spotlight {
+    opacity: 1;
+}
+
+/* Hover Overlay */
+.poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.6) 40%,
+            rgba(0, 0, 0, 0.3) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: var(--space-lg);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.poster-card:hover .poster-overlay {
+    opacity: 1;
+}
+
+.poster-overlay-content {
+    text-align: left;
+}
+
+.poster-category {
+    display: inline-block;
+    font-size: var(--text-xs);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: var(--space-xs);
+}
+
+.poster-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    margin-bottom: var(--space-xs);
+    line-height: 1.2;
+}
+
+.poster-year {
+    font-size: var(--text-sm);
+    color: var(--color-gray-muted);
+}
+
+.poster-cta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    font-size: var(--text-sm);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+.poster-cta svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Film Sprocket Holes */
+.poster-sprockets {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    background: repeating-linear-gradient(to bottom,
+            transparent 0px,
+            transparent 10px,
+            rgba(0, 0, 0, 0.8) 10px,
+            rgba(0, 0, 0, 0.8) 20px);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    pointer-events: none;
+}
+
+.poster-sprockets.left {
+    left: -16px;
+}
+
+.poster-sprockets.right {
+    right: -16px;
+}
+
+.poster-card:hover .poster-sprockets {
+    opacity: 0.3;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .poster-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .poster-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .work-title {
+        font-size: var(--text-4xl);
+    }
+
+    .poster-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .filter-buttons {
+        gap: var(--space-sm);
+    }
+
+    .filter-btn {
+        padding: var(--space-xs) var(--space-md);
+        font-size: var(--text-xs);
+    }
+}

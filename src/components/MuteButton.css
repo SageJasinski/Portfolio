@@ -1,0 +1,36 @@
+/* Mute Button Styles */
+
+.mute-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--color-gray);
+    border-radius: 50%;
+    color: var(--color-gray-muted);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.mute-button:hover {
+    color: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+.mute-button.muted {
+    color: var(--color-red);
+    border-color: var(--color-red);
+}
+
+.mute-button.muted:hover {
+    color: var(--color-red-bright);
+    border-color: var(--color-red-bright);
+}
+
+.mute-button svg {
+    width: 18px;
+    height: 18px;
+}

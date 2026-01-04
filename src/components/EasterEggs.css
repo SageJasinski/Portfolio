@@ -1,0 +1,232 @@
+/* Easter Eggs Styles */
+
+.easter-egg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Director Mode - Konami Code */
+.director-mode {
+    background: transparent;
+}
+
+.director-frame {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.frame-corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--color-gold);
+}
+
+.frame-corner.top-left {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.frame-corner.top-right {
+    top: -2px;
+    right: -2px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.frame-corner.bottom-left {
+    bottom: -2px;
+    left: -2px;
+    border-right: none;
+    border-top: none;
+}
+
+.frame-corner.bottom-right {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
+}
+
+.frame-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: monospace;
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.rec-dot {
+    width: 12px;
+    height: 12px;
+    background: #ff0000;
+    border-radius: 50%;
+    animation: recBlink 1s infinite;
+}
+
+@keyframes recBlink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.timecode {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: monospace;
+    font-size: 18px;
+    color: var(--color-white);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4px 12px;
+    letter-spacing: 0.1em;
+}
+
+.director-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-gold);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+    letter-spacing: 0.2em;
+    animation: pulseGlow 1s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    from {
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    }
+
+    to {
+        text-shadow: 0 0 40px rgba(212, 175, 55, 0.9);
+    }
+}
+
+/* Action! Overlay */
+.action-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clapperboard {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.clapper-stick {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: repeating-linear-gradient(-45deg,
+            #1a1a1a 0px,
+            #1a1a1a 20px,
+            var(--color-gold) 20px,
+            var(--color-gold) 40px);
+    border-radius: 4px 4px 0 0;
+    transform-origin: left bottom;
+    z-index: 2;
+}
+
+.clapper-board {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1a1a1a;
+    border: 3px solid var(--color-gold);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clapper-board span {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--color-gold);
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+}
+
+/* Film Burn Effect */
+.film-burn-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.film-burn {
+    position: absolute;
+    background: radial-gradient(ellipse at center,
+            rgba(255, 200, 100, 0.9) 0%,
+            rgba(255, 150, 50, 0.7) 30%,
+            rgba(200, 50, 0, 0.5) 60%,
+            transparent 80%);
+    border-radius: 50%;
+    animation: burnFlicker 0.1s infinite alternate;
+}
+
+.film-burn:nth-child(1) {
+    width: 400px;
+    height: 400px;
+    top: 20%;
+    right: -100px;
+}
+
+.film-burn.burn-2 {
+    width: 300px;
+    height: 300px;
+    bottom: 30%;
+    left: 10%;
+    animation-delay: 0.05s;
+}
+
+.film-burn.burn-3 {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    left: 40%;
+    animation-delay: 0.08s;
+}
+
+@keyframes burnFlicker {
+    from {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
