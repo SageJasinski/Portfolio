@@ -4,9 +4,7 @@ import { useAudio } from '../context/AudioContext'
 import './About.css'
 
 const skills = [
-    { name: 'Adobe Premiere Pro', level: 95 },
     { name: 'DaVinci Resolve', level: 90 },
-    { name: 'Final Cut Pro', level: 85 },
     { name: 'After Effects', level: 80 },
     { name: 'Avid Media Composer', level: 75 },
     { name: 'Color Grading', level: 85 },
@@ -15,10 +13,7 @@ const skills = [
 ]
 
 const timeline = [
-    { year: '2024', title: 'Senior Editor', description: 'Leading editorial teams on major productions' },
-    { year: '2022', title: 'Freelance Editor', description: 'Working with diverse clients on commercials and films' },
-    { year: '2020', title: 'Assistant Editor', description: 'Learning the craft on professional sets' },
-    { year: '2018', title: 'Started Journey', description: 'First steps into the world of film editing' },
+    { year: '2025', title: 'Editor', description: 'Begging Path to Editor' },
 ]
 
 function About() {

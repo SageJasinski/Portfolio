@@ -82,8 +82,8 @@ function Contact() {
                                     </div>
                                     <div>
                                         <span className="contact-info-label">Email</span>
-                                        <a href="mailto:hello@sagejasinski.com" className="contact-info-value">
-                                            hello@sagejasinski.com
+                                        <a href="mailto:sagejasinski@gmail.com" className="contact-info-value">
+                                            sagejasinski@gmail.com
                                         </a>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@ function Contact() {
                                     </div>
                                     <div>
                                         <span className="contact-info-label">Location</span>
-                                        <span className="contact-info-value">Los Angeles, CA</span>
+                                        <span className="contact-info-value">Seattle, WA</span>
                                     </div>
                                 </div>
 
@@ -116,7 +116,7 @@ function Contact() {
 
                                 {/* Response Time */}
                                 <div className="response-note">
-                                    <p>I typically respond within 24-48 hours.</p>
+                                    <p>I typically try to respond within 24-48 hours.</p>
                                 </div>
                             </motion.div>
 
