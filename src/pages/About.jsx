@@ -69,19 +69,18 @@ function About() {
                         >
                             <h2 className="section-title">My Philosophy</h2>
                             <p>
-                                I believe that great editing is invisible. When done right, the audience
-                                forgets they're watching a cut sequence of shots—they're simply immersed
-                                in the story. Every frame serves a purpose, every transition carries emotion.
+                                I believe that great editing is invisible. Bringing a story to life and inspiring others can
+                                take a lot of work.There are a lot of important choices that need to be made alnog the way. As an editor
+                                It is my duty to stay true to the work that has been done while also adding my own personal touch in a way
+                                that inspires the work to be even greater.
                             </p>
                             <p>
-                                With years of experience across documentaries, commercials, music videos,
-                                and narrative films, I bring a versatile approach to every project. Whether
-                                it's a heart-pounding action sequence or an intimate character moment, I craft
-                                edits that resonate.
-                            </p>
-                            <p>
-                                When I'm not in the editing bay, you'll find me studying the masters—from
-                                Walter Murch to Thelma Schoonmaker—always learning, always evolving my craft.
+                                Growing up I would watch old kung foo movies with my dad. Over the years movies have been the life blood
+                                of my connection with others. They have inspired me and changed me into the man i am today. There seems to be
+                                an uncanny decline in the quality of movies over the years. With some exceptions of course. I belive that an accute
+                                attention to detail and a strong work ethic is what sets an editor apart from the rest. At the end of the day,
+                                If I can improve the quality of movies, if I can help just one person in the audience for a moment forget about their worries
+                                and enjoy the art of storytelling, then I have done my job.
                             </p>
                             <div className="about-bio-cta">
                                 <Link
